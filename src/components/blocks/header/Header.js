@@ -17,7 +17,7 @@ function Header() {
                         </div>
                     </div>
                     <a href="">
-                        <img src={user} alt="" className={s.user} />
+                        <img src={user} alt="#" className={s.user} />
                     </a>
                 </div>
             </div>

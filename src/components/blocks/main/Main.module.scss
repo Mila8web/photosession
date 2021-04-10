@@ -1,23 +1,43 @@
-@import './../../../styles/sass/_vars.scss';
-@import './../../../styles/sass/_mixins.scss';
+@import './../../../styles/sass/_vars';
+@import './../../../styles/sass/_mixins';
 
 .main {
-    background: rgb(202, 202, 202);
+    background-image: url(./../../../assets/img/mainBgn.jfif);
+    background-size: cover;
+    background-position: 62% center;
     color: $primaryColor;
+
     .container {
         @extend %container;
+
         .inner {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 655px;
-            .title{
-                @include text(32px, 700, 39px); 
+            min-height: 655px;
+
+            @media screen and (min-width: 768px) {
+                min-height: 840px;
+            }
+
+            .title {
+                @include font(32px, 700, 39px);
                 max-width: 247px;
+
+                @media screen and (min-width: 768px) {
+                    max-width: 596px;
+                    @include font(40px, 700, 49px);
+                }
+
+                @media screen and (min-width: 1280px) {
+                    max-width: 886px;
+                }
+
                 span {
                     color: $accentColor;
                 }
             }
+
             .priceBox {
                 height: 93px;
                 width: 208px;
@@ -27,16 +47,34 @@
                 display: flex;
                 justify-content: space-around;
                 padding: 5px 15px;
+
+                @media screen and (min-width: 768px) {
+                    height: 96px;
+                    width: 224px;
+                }
+
+
                 .wrapper {
                     display: flex;
                     flex-direction: column;
-                    .priceLabel{
-                        @include text(18px, 400, inherit);   
+
+                    .priceLabel {
+                        @include font (18px, 400, 27px);
+
+                        @media screen and (min-width: 768px) {
+                            @include font(20px, 400, 30px);
+                        }
                     }
+
                     .price {
-                        @include text(30px, 800, inherit);
+                        @include font (30px, 800, 45px);
+
+                        @media screen and (min-width: 768px) {
+                            @include font(35px, 800, 30px);
+                        }
                     }
                 }
+
                 .percent {
                     border-radius: 50%;
                     filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
