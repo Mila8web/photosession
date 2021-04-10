@@ -1,2 +1,73 @@
+@import './../../../styles/sass/_vars';
+@import './../../../styles/sass/_mixins';
+
+.header {
+    @include font (14px, 400, 17px);
+
+    @media screen and (min-width: 768px) {
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    }
 
 
+    .container {
+        @extend %container;
+
+        .inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+
+            @media screen and (min-width: 768px) {
+                height: 100px;
+            }
+
+            .wrap {
+                display: flex;
+                align-items: center;
+
+                .logo {
+                    margin-right: 45px;
+
+                    @media screen and (min-width: 576px) {
+                        margin-right: 36px;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        width: 140px;
+                    }
+                }
+
+                .moscowPhone {
+                    color: $linkColor;
+
+                    @media screen and (min-width: 576px) {
+                        display: none;
+                    }
+                }
+
+                .phone {
+                    display: none;
+
+                    @media screen and (min-width: 576px) {
+                        display: block;
+                    }
+
+                    span {
+                        color: $textColorLight;
+                    }
+
+                    .phoneLink {
+                        color: $textColor;
+                    }
+                }
+            }
+
+            .user {
+                @media screen and (min-width: 1280px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
