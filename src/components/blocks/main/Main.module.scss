@@ -1,0 +1,49 @@
+@import './../../../styles/sass/vars.scss';
+@import './../../../styles/sass/mixins.scss';
+
+.main {
+    background: rgb(202, 202, 202);
+    color: $primaryColor;
+    .container {
+        @extend %container;
+        .inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 655px;
+            .title{
+                @include text(32px, 700, 39px); 
+                max-width: 247px;
+                span {
+                    color: $accentColor;
+                }
+            }
+            .priceBox {
+                height: 93px;
+                width: 208px;
+                background-image: url(./../../../assets/img/price-box.svg);
+                background-repeat: no-repeat;
+                margin: 36px 0 14px;
+                display: flex;
+                justify-content: space-around;
+                padding: 5px 15px;
+                .wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    .priceLabel{
+                        @include text(18px, 400, inherit);   
+                    }
+                    .price {
+                        @include text(30px, 800, inherit);
+                    }
+                }
+                .percent {
+                    border-radius: 50%;
+                    filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+                    max-height: 47px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
