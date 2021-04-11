@@ -7,6 +7,24 @@
     background-position: 62% center;
     color: $primaryColor;
 
+    @media screen and (min-width: 768px) {
+        background-size: 232%;
+        background-position: 56% center;
+    }
+
+    @media screen and (min-width: 1280px) {
+        background-size: 140%;
+        background-position: 50% center;
+    }
+
+    @media screen and (min-width: 1440px) {
+        background-size: 134%;
+    }
+
+    @media screen and (min-width: 1920px) {
+        background-size: 100%;
+    }
+
     .container {
         @extend %container;
 
@@ -23,10 +41,16 @@
             .title {
                 @include font(32px, 700, 39px);
                 max-width: 247px;
+                margin-top: -5px;
+
+                @media screen and (min-width: 576px) {
+                    margin-top: 14px;
+                }
 
                 @media screen and (min-width: 768px) {
                     max-width: 596px;
                     @include font(40px, 700, 49px);
+                    // margin-top: 44px;
                 }
 
                 @media screen and (min-width: 1280px) {
@@ -43,14 +67,16 @@
                 width: 208px;
                 background-image: url(./../../../assets/img/price-box.svg);
                 background-repeat: no-repeat;
-                margin: 36px 0 14px;
+                background-size: cover;
+                margin: 36px 0 14px -5px;
                 display: flex;
                 justify-content: space-around;
-                padding: 5px 15px;
+                padding: 6px 15px;
 
                 @media screen and (min-width: 768px) {
                     height: 96px;
-                    width: 224px;
+                    width: 233px;
+                    margin: 18px 0 0 -5px;
                 }
 
 
@@ -63,14 +89,17 @@
 
                         @media screen and (min-width: 768px) {
                             @include font(20px, 400, 30px);
+                            padding-top: 5px;
+                            padding-left: 4px;
                         }
                     }
 
                     .price {
-                        @include font (30px, 800, 45px);
+                        @include font (30px, 800, 35px);
 
                         @media screen and (min-width: 768px) {
-                            @include font(35px, 800, 30px);
+                            @include font(35px, 800, 34px);
+                            margin-left: 5px;
                         }
                     }
                 }
@@ -80,6 +109,12 @@
                     filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
                     max-height: 47px;
                     margin-top: 10px;
+                    transform: translatex(4px);
+
+                    @media screen and (min-width: 768px) {
+                        max-height: 52px;
+                        transform: translate(-10px, 2px);
+                    }
                 }
             }
         }
