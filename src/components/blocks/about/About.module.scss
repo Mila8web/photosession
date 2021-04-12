@@ -1,0 +1,85 @@
+@import './../../../styles/sass/_vars';
+@import './../../../styles/sass/_mixins';
+
+.about {
+    color: $textColor;
+    @include font(14px, 400, 20px);
+
+    .container {
+        @extend %container;
+
+        .inner {
+            padding: 39px 0 0;
+            max-height: 613px;
+
+            .gridWrap {
+                display: grid;
+                grid-auto-columns: 1fr 1fr;
+                grid-auto-rows: 80px 196px 150px 224px;
+                column-gap: 30px;
+
+                .title {
+                    @include font(28px, 400, 34px);
+                    text-align: center;
+                    padding-left: 24px;
+                    grid-area: 1/1/2/3;
+                }
+
+                .img {
+                    width: 290px;
+                    height: 197px;
+                    border-radius: 4px;
+                    grid-area: 2/1/3/3;
+                }
+
+                .text {
+                    grid-area: 3/1/4/3;
+                    padding: 30px 0;
+                    // margin: 30px 0;
+                }
+
+                .listItems {
+                    grid-area: 4/1/5/3;
+
+                    .item {
+                        display: flex;
+
+                        a {
+                            font-weight: 500;
+                            list-style: none;
+
+                            img {
+                                margin-right: 10px;
+                            }
+                        }
+
+                        span {
+                            margin-left: 2px;
+                            margin-bottom: 26px;
+                        }
+                    }
+                }
+            }
+
+            .ratingWrap {
+                min-height: 70px;
+                display: flex;
+                align-items: center;
+                // margin-top: 40px;
+
+                .rating {
+                    margin-left: 16px;
+
+                    p {
+                        margin-bottom: 6px;
+                        padding-top: 5px;
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
