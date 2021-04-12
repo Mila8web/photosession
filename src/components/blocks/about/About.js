@@ -17,7 +17,7 @@ function About() {
             <div className={s.container}>
                 <div className={s.inner}>
                     <div className={s.gridWrap}>
-                    <h2 className={s.title}>Фотосессия в вертолете</h2>
+                    <h2 className={s.title}>Фотосессия в вертолете  </h2>
                         <img src={fotoKiss} alt="fotoKiss" className={s.img} />
                     <p className={s.text}>Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
                     <div className={s.listItems}>
@@ -51,7 +51,7 @@ function About() {
                     <div className={s.ratingWrap}>
                         <img src={cup} alt="cup" />
                         <div className={s.rating}>
-                            <p>Более <span>150</span>  отзывов с оценкой </p>
+                            <p>Более <span>50</span>  отзывов с оценкой </p>
                             <img src={rating} alt="rating"  />
                         </div>
                         
