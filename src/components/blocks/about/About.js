@@ -17,33 +17,33 @@ function About() {
             <div className={s.container}>
                 <div className={s.inner}>
                     <div className={s.gridWrap}>
-                    <h2 className={s.title}>Фотосессия в вертолете  </h2>
+                        <h2 className={s.title}>Фотосессия в вертолете  </h2>
                         <img src={fotoKiss} alt="fotoKiss" className={s.img} />
-                    <p className={s.text}>Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
+                        <p className={s.text}>Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
                     <div className={s.listItems}>
                             <div className={s.item}>
-                                <a>
+                                <a className={s.linkTime}>
                                     <img src={time} alt="icon" className={s.icon}/>
                                 </a>
-                                <span>3 часа съемки</span>
+                                <span className={s.spanTime}>3 часа съемки</span>
                             </div>
                             <div className={s.item}>
-                                <a>
+                                <a className={s.linkPhoto}>
                                     <img src={photo} alt="icon" className={s.icon}/> 
                                 </a>
-                                <span>Более 50 фотографий</span>
+                                <span className={s.spanPhoto}>Более 50 фотографий</span>
                             </div>
                             <div className={s.item}>
-                                <a>
+                                <a className={s.linkMark}>
                                     <img src={mark} alt="icon" className={s.icon}/>
                                 </a>
-                                <span>Москва</span>
+                                <span className={s.spanMark}>Москва</span>
                             </div>
                             <div className={s.item}>
-                                <a>
+                                <a className={s.linkBubble}>
                                     <img src={bubble} alt="icon" className={s.icon}/>
                                 </a>
-                                <span>Готовы ответить на любые вопросы</span>
+                                <span className={s.spanBubble}>Готовы ответить на любые вопросы</span>
                             </div>
                     </div >
                     </div>

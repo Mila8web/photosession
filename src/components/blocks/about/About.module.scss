@@ -11,6 +11,9 @@
         .inner {
             padding: 39px 0 0;
             max-height: 613px;
+            @media screen and (min-width: 576px) {
+                padding: 50px 0 0;
+            }
 
             .gridWrap {
                 display: grid;
@@ -21,17 +24,24 @@
                 @media screen and (min-width: 576px) {
                     grid-auto-rows: 80px 340px 130px 224px;
                 }
+                @media screen and (min-width: 768px) {
+                    grid-auto-rows: 130px 437px 130px 224px;
+                }
 
+                .titleWrap {
+                    display: flex;
+                    justify-content: center;
+                }
                 .title {
-                    max-width: 289px;
-                    padding: 0 50px 0 50px;
+                    max-width: 189px;
+                    margin: 0 auto 0 auto;
                     @include font(28px, 400, 34px);
                     text-align: center;
                     grid-area: 1/1/2/3;
 
-                    @media screen and (min-width: 576px) {
-                        max-width: 289px;
-                        // padding: 0 200px 0 166px;
+                    @media screen and (min-width: 768px) {
+                        @include font(40px, 500, 49px);
+                        max-width: 280px;
                     }
                 }
 
@@ -45,7 +55,6 @@
                     grid-area: 3/1/4/3;
                     padding: 30px 0;
 
-                    // margin: 30px 0;
                     @media screen and (min-width: 576px) {
                         @include font(18px, 400, 26px);
                     }
@@ -60,15 +69,32 @@
                         a {
                             font-weight: 500;
                             list-style: none;
-
-                            img {
-                                margin-right: 10px;
-                            }
                         }
 
-                        span {
-                            margin-left: 2px;
-                            margin-bottom: 26px;
+                        .linkTime {
+                            margin: -6px 13px 0 0;
+                        }
+                        .spanTime{}
+                        
+                        .linkPhoto{
+                            margin: 15px 9px 0 0;
+                        }
+                        .spanPhoto{
+                            margin-top: 22px;
+                        }
+
+                        .linkMark{
+                            margin: 10px 10px 0 0;
+                        }
+                        .spanMark{
+                            margin-top: 20px;
+                        }
+
+                        .linkBubble{
+                            margin: 12px 12px 0 0;
+                        }
+                        .spanBubble{
+                            margin-top: 17px;
                         }
                     }
                 }
